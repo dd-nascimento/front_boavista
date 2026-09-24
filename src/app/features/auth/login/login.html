@@ -1,10 +1,47 @@
-<div class="container">
-    <div id="login">
-        <h1>Login</h1>
-        <form>
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
-            <button type="submit">Login</button>
-        </form>
+<div class="login-page">
+
+  <div class="visual-area">
+    <!-- Futuramente entra a imagem dinâmica aqui -->
+  </div>
+
+  <div class="login-area">
+
+    <div class="login-content">
+
+      <h1>Bem-vindo</h1>
+
+      <p>Entre com suas credenciais para continuar.</p>
+
+      <form>
+
+        <div class="form-field">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            class="matInput"
+            id="email"
+            type="email"
+            placeholder="Digite seu e-mail"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="password" class="form-label">Senha</label>
+          <input
+            class="matInput"
+            id="password"
+            type="password"
+            placeholder="Digite sua senha"
+          />
+        </div>
+
+        <button (click)="testarLogin()">
+          Entrar
+        </button>
+
+      </form>
+
     </div>
+
+  </div>
+
 </div>
