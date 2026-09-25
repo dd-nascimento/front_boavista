@@ -1,22 +1,31 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
-  imports: [MatButtonModule],
+  imports: [
+    FormsModule,
+    MatButtonModule, 
+    MatFormFieldModule, 
+    MatInputModule
+  ],
   selector: 'app-login',
   styleUrl: './login.css',
   templateUrl: './login.html',
 })
 export class Login {
-
+email: any;
+password: any;
   constructor(private authService: AuthService) {}
 
-  testarLogin() {
-
+  loginBV(){
     const dados = {
-      email: 'developer@boavista.net',
-      password: '123@123'
+      email: this.email,
+      password: this.password
     };
 
     this.authService.login(dados).subscribe({

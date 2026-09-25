@@ -1,7 +1,6 @@
 <div class="login-page">
 
   <div class="visual-area">
-    <!-- Futuramente entra a imagem dinâmica aqui -->
   </div>
 
   <div class="login-area">
@@ -12,33 +11,24 @@
 
       <p>Entre com suas credenciais para continuar.</p>
 
-      <form>
+      <form (ngSubmit)="loginBV()">
+        
+        <mat-form-field>
+          <mat-label>E-mail</mat-label>
+          <input matInput type="email" [(ngModel)]="email" name="email">
+        </mat-form-field>
 
-        <div class="form-field">
-          <label for="email" class="form-label">E-mail</label>
-          <input
-            class="matInput"
-            id="email"
-            type="email"
-            placeholder="Digite seu e-mail"
-          />
-        </div>
+        <mat-form-field>
+          <mat-label>Senha</mat-label>
+          <input matInput type="password" [(ngModel)]="password" name="password">
+        </mat-form-field>
 
-        <div class="form-field">
-          <label for="password" class="form-label">Senha</label>
-          <input
-            class="matInput"
-            id="password"
-            type="password"
-            placeholder="Digite sua senha"
-          />
-        </div>
-
-        <button (click)="testarLogin()">
+        <button mat-raised-button type="submit">
           Entrar
         </button>
 
       </form>
+      
 
     </div>
 

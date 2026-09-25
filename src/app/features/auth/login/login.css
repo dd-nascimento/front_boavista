@@ -14,8 +14,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: #ffffff;
 }
 
 .login-content {
@@ -23,34 +21,12 @@
   max-width: 400px;
 }
 
-.login-content h1 {
-  margin-bottom: 8px;
-}
-
-.login-content p {
-  margin-bottom: 32px;
-}
-
-.form-field {
+form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
-.form-field label {
-  margin-bottom: 8px;
-}
-
-.form-field input {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+form button {
+  background-color: #142C49;
+  color: white;
 }
