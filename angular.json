@@ -57,7 +57,8 @@
               "buildTarget": "front-boavista:build:production"
             },
             "development": {
-              "buildTarget": "front-boavista:build:development"
+              "buildTarget": "front-boavista:build:development",
+		 "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
