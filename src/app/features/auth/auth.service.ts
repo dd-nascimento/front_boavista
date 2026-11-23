@@ -14,7 +14,8 @@ export class AuthService {
     login(dados: LoginRequest) {
     return this.http.post<LoginResponse>(
         `${API_BASE_URL}auth/login`,
-        dados
+        dados,
+        { withCredentials:true }
     );
     }
 }

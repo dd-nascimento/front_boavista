@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-
 
 @Component({
   imports: [
@@ -20,7 +20,10 @@ import { FormsModule } from '@angular/forms';
 export class Login {
 email: any;
 password: any;
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   loginBV(){
     const dados = {
@@ -32,6 +35,8 @@ password: any;
       next: (resposta) => {
         console.log('Login realizado!');
         console.log(resposta);
+
+        this.router.navigate(['/home']);
       },
       error: (erro) => {
         console.error('Erro no login:', erro);
